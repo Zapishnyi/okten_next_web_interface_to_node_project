@@ -9,6 +9,7 @@ type Props = { children: React.ReactNode }
 
 
 const Layout = ({children}: Props) => {
+    console.log(".")
     return (
         <div>
             {children}

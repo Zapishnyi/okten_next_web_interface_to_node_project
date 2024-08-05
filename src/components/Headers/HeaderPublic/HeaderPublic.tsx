@@ -10,8 +10,8 @@ const HeaderPublic = () => {
                 search
             </div>
             <ul className={styles.list}>
-                <li><Link href={"/sing-up"}>Sing up</Link></li>
-                <li><Link href={"/login"}>Login</Link></li>
+                <li><Link href={"/public/sing_up"}>Sing up</Link></li>
+                <li><Link href={"/public/login"}>Login</Link></li>
             </ul>
         </div>
     );
