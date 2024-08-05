@@ -1,10 +1,15 @@
 import React from 'react';
 import Link from "next/link";
+import styles from "../Header.module.css";
 
 const HeaderPublic = () => {
     return (
-        <div>
-            <ul>
+        <div className={styles.wrapper}>
+            <div>Logo</div>
+            <div>
+                search
+            </div>
+            <ul className={styles.list}>
                 <li><Link href={"/sing-up"}>Sing up</Link></li>
                 <li><Link href={"/login"}>Login</Link></li>
             </ul>
