@@ -15,7 +15,7 @@ const SingUpForm = () => {
             headers: {Accept: "application/json"},
             body: JSON.stringify(FormData)
         }).then(data => data.json())
-        console.log("received user", user);
+        console.log("received user", FormData);
     };
     return (
         <div>
