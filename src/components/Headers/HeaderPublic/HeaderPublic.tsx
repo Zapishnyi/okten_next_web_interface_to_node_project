@@ -5,7 +5,7 @@ import styles from "../Header.module.css";
 const HeaderPublic = () => {
     return (
         <div className={styles.wrapper}>
-            <div>Logo</div>
+            <div><Link href={"/"}>Logo</Link></div>
             <div>
                 search
             </div>
