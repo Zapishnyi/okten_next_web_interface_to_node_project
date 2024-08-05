@@ -1,0 +1,6 @@
+.pageWrapper {
+    width: 100%;
+    height: 90dvh;
+    display: flex;
+    padding: 5px;
+}
