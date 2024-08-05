@@ -1,14 +1,21 @@
 "use client"
 import React from 'react';
 import {useForm} from "react-hook-form";
-import {IUserLogin, IUserSingUp} from "@/interfaces/IUser";
+import {IUserSingUp} from "@/interfaces/IUser";
+import {base, urls} from "@/constants/urls";
+import {ICarUpdated} from "@/interfaces/ICar";
 
-const SingUp = () => {
+const SingUpForm = () => {
     console.log(".")
     const {register, handleSubmit} = useForm<IUserSingUp>()
 
-    const formSubmitHandler = (FormData: IUserSingUp) => {
-        console.log(FormData);
+    const formSubmitHandler = async (FormData: IUserSingUp) => {
+        const user: ICarUpdated = await fetch(base + urls.singUp, {
+            method: "POST",
+            headers: {Accept: "application/json"},
+            body: JSON.stringify(FormData)
+        }).then(data => data.json())
+        console.log("received user", user);
     };
     return (
         <div>
@@ -25,4 +32,4 @@ const SingUp = () => {
     );
 };
 
-export default SingUp;
+export default SingUpForm;

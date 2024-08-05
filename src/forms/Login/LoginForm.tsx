@@ -3,7 +3,7 @@ import React from 'react';
 import {useForm} from "react-hook-form";
 import {IUserLogin} from "@/interfaces/IUser";
 
-const Login = () => {
+const LoginForm = () => {
     console.log(".")
     const {register, handleSubmit} = useForm<IUserLogin>()
 
@@ -24,4 +24,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default LoginForm;

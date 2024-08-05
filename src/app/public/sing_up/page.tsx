@@ -1,10 +1,10 @@
 import React from 'react';
-import SingUp from "@/components/SingUp/SingUp";
+import SingUpForm from "@/forms/SingUp/SingUpForm";
 
 const SingUpPage = () => {
     return (
         <div>
-            <SingUp/>
+            <SingUpForm/>
         </div>
     );
 };
