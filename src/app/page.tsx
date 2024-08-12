@@ -1,3 +1,4 @@
+"use client"
 import {ICarUpdated} from "@/interfaces/ICar";
 import CarCard from "@/components/CarCard/CarCard";
 import styles from "./page.module.css"
