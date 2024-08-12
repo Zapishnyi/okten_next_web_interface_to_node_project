@@ -3,5 +3,7 @@
     height: 90dvh;
     display: flex;
     padding: 5px;
-    gap: 10px
+    gap: 10px;
+    flex-wrap: wrap;
+
 }

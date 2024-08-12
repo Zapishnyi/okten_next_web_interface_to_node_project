@@ -10,6 +10,7 @@ export interface IUser {
   name: string;
   age: number;
   phone: string;
+  avatar: string;
   gender: GenderEnum;
   isVerified: boolean;
   createdAt: Date;
@@ -24,6 +25,7 @@ export interface IUserUpdate
       | "password"
       | "email"
       | "name"
+      | "avatar"
       | "age"
       | "gender"
       | "phone"
@@ -33,6 +35,7 @@ export interface IUserUpdate
   > {}
 
 export interface IUserUpdated extends Required<IUser> {}
+export interface IUserPresented extends Partial<Omit<IUser, "password">> {}
 
 export interface IUserLogin extends Pick<IUser, "userName" | "password"> {}
 export interface IUserEmail extends Pick<IUser, "email"> {}
@@ -42,6 +45,11 @@ export interface IUserSingUp
 
 export interface IUserNonSensitive
   extends Partial<Pick<IUser, "name" | "age" | "gender" | "phone">> {}
+
+export interface IUserDeleteKeys
+  extends Partial<
+    Pick<IUser, "name" | "age" | "gender" | "phone" | "avatar">
+  > {}
 
 export interface IUserPasswordReNew extends Pick<IUser, "password"> {}
 export interface IUserVerify extends Pick<IUser, "isVerified"> {}
