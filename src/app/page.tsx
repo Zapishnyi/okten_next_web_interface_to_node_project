@@ -8,7 +8,7 @@ export default async function Home() {
     // const cars: ICarUpdated[] = await fetch("http://localhost:3001/cars").then(data => data.json())
     let cars: IPaginationResult<ICarUpdated, CarOrderByEnum>
 
-    cars = await fetch("https://node-test-server-nhs2.onrender.com/cars?limit=20&page=1&order=desc&orderBy=yearBuild", {cache: "no-cache"}).then(data => data.json())
+    cars = await fetch("https://node-test-server-nhs2.onrender.com/cars", {cache: "no-cache"}).then(data => data.json())
     return <div className={styles.pageWrapper}>
         {cars.data.map((e, index) => <CarCard key={index} car={e}/>)}
     </div>
