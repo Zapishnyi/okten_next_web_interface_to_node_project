@@ -7,7 +7,7 @@ import {CarOrderByEnum} from "@/enums/carOrderBy.enum";
 export default async function Home() {
     // const cars: ICarUpdated[] = await fetch("http://localhost:3001/cars").then(data => data.json())
 
-    const cars = (await fetch("https://node-test-server-nhs2.onrender.com/cars", {cache: "only-if-cached"}).then(data => data.json())) as IPaginationResult<ICarUpdated, CarOrderByEnum>
+    const cars = (await fetch("https://node-test-server-nhs2.onrender.com/cars", {cache: "no-cache"}).then(data => data.json())) as IPaginationResult<ICarUpdated, CarOrderByEnum>
     console.log("Cars", cars)
 
 
